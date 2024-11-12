@@ -1,6 +1,7 @@
 package com.sognisport.challenge.api.service;
 
 import java.time.Instant;
+import java.util.List;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
@@ -50,4 +51,8 @@ public class ExchangeService {
             throw new RuntimeException("Erro ao obter a taxa de conversão: " + exchangeDTO.getResult());
         }
     }
+    
+    public List<ExchangeHistory> listAllExchangeHistory() {     
+        return exchangeHistoryRepository.listAll();
+    }    
 }

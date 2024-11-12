@@ -27,9 +27,10 @@ Esta API REST consulta a taxa de câmbio entre duas moedas usando um serviço ex
      
 # Docker
 
-	./mvnw package
-	docker build -f src/main/docker/Dockerfile -t sognisport-exchange-api 
-	docker run -i --rm -p 8090:8090 sognisport-exchange-api
+	compilar:
+		docker build -t sognisport-challenge-api .
+	executar:
+		docker run --name sognisport-challenge-api -p 8090:8090 sognisport-challenge-api
 	
 # Docs
 
